@@ -7,10 +7,6 @@ namespace LawyerOffice
         static void Main(string[] args)
         {
             LawyerOffice lawyerOffice = new LawyerOffice();
-            TranslationOffice translationOffice = new TranslationOffice();
-            DeliveryStore foodstore = new DeliveryStore();
-            lawyerOffice._translationOffice = translationOffice;
-            lawyerOffice._deliveryOffice = foodstore;
 
             lawyerOffice.startTanslation(LANGUAGE.ENG, "Hola");
             lawyerOffice.BuyFood(RESTAURANT.Pizzeria, "Voglia la pizza!");
@@ -20,7 +16,11 @@ namespace LawyerOffice
     {
         public TranslationOffice _translationOffice { get; set; }   
         public DeliveryStore _deliveryOffice { get; set; }
-        public LawyerOffice() { }
+        public LawyerOffice() 
+        {
+            this._translationOffice = new TranslationOffice();
+            this._deliveryOffice = new DeliveryStore();
+        }
         public void startTanslation(LANGUAGE lang, string text)
         {
             string textTranslated = _translationOffice.Translate(lang,text);
