@@ -8,8 +8,8 @@ namespace LawyerOffice
         {
             LawyerOffice lawyerOffice = new LawyerOffice();
 
-            lawyerOffice.startTanslation(LANGUAGE.ENG, "Hola");
-            lawyerOffice.BuyFood(RESTAURANT.Pizzeria, "Voglia la pizza!");
+            lawyerOffice.StartTanslation(LANGUAGE.ENG, "Hola");
+            lawyerOffice.BuyFood(RESTAURANT.Fastfood, "Voglio un hambuger!");
         }
     }
     public class LawyerOffice
@@ -21,7 +21,7 @@ namespace LawyerOffice
             this._translationOffice = new TranslationOffice();
             this._deliveryOffice = new DeliveryOffice();
         }
-        public void startTanslation(LANGUAGE lang, string text)
+        public void StartTanslation(LANGUAGE lang, string text)
         {
             string textTranslated = _translationOffice.Translate(lang,text);
             Console.WriteLine(textTranslated);

@@ -4,11 +4,11 @@
     {
         public string SellFood(string food);
     }
-    public class McDonal : IRestaurant
+    public class Fastfood : IRestaurant
     {
         public string SellFood(string food)
         {
-            return "Mc Burger";
+            return "Hamburger";
         }
     }
 
@@ -20,7 +20,7 @@
         }
     }
 
-    public class PizzaNapoli : IRestaurant
+    public class Pizzeria : IRestaurant
     {
         public string SellFood(string food)
         {

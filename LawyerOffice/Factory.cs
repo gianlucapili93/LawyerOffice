@@ -24,11 +24,11 @@
             switch(food)
             {
                 case RESTAURANT.Fastfood:
-                    return new McDonal();
+                    return new Fastfood();
                 case RESTAURANT.CoffeShop:
                     return new CoffeeBar();
                 case RESTAURANT.Pizzeria:
-                    return new PizzaNapoli();
+                    return new Pizzeria();
 
                 default:
                     return null;
